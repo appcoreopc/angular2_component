@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
-
-
 @Component({
   selector: 'my-app',
-  template: `<h1>Hello {{name}}</h1><reset-component [(counter)]="counterValue" (counterChange)="onCounterChanged($event)" ></reset-component>`
+  templateUrl : `./app/ app.component.html`
 })
 
 export class AppComponent  {
 
   name = 'Angular';
   counterValue = 5;
+  inputTextValue = "angular2";
 
   onCounterChanged(evt: number) {
     console.log(evt);
+  }
+
+  getValue() {
+    console.log(this.inputTextValue);
   }
 }

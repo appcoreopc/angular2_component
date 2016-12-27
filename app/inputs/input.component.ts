@@ -1,25 +1,23 @@
-
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { NgModule } from '@angular/core';
 
 @Component({
-  selector: 'reset-component',
-  template: `<button (click)="decrement()">-
-  </button><span>{{counter}}</span><button (click)="increment()">+</button> `,
+  selector: 'input-component',
+  template: `<input [ngModel]="value" (ngModelChange)="modelChanged($event)" name="inputControl" /><button (click)="getValue()"><button>`,
 })
 
 export class InputComponent
 {
-  @Output() counterChange = new EventEmitter();
+  private _value:string = "";
 
-  @Input() counter = 0;
+  @Input() value = "";
 
-  decrement() {
-    this.counter--;
-    this.counterChange.emit(this.counter);
+  modelChanged(evt:any)
+  {
+    console.log(evt);
   }
 
-  increment() {
-    this.counter++;
-    this.counterChange.emit(this.counter);
+  getValue() {
+     console.log(this.value);
   }
  }
