@@ -1,5 +1,13 @@
 <h1>Hello {{name}}</h1><reset-component [(counter)]="counterValue" (counterChange)="onCounterChanged($event)" ></reset-component>
 <br/>
 
-<input-component [value]="inputTextValue"></input-component>
+<form>
+
+Required
+<input-component [value]="inputTextValue" [isRequired]="true" (onModelChanged)="modelChanged($event)" ></input-component>
+
+Optional
+<input-component [value]="inputTextValue" [isRequired]="false" (onModelChanged)="modelChanged($event)" ></input-component>
+</form>
+
 <button (click)="getValue()">Get </button>
