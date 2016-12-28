@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TypeData } from "./inputs/enumDataType"
+
 @Component({
   selector: 'my-app',
   templateUrl : `./app/app.component.html`
