@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
   selector: 'input-component',
   template: `
 
-   <input *ngIf="dataType == 'text'" [ngModel]="value" simpleText SimpleTextDirective [required]="isRequired"
+   <input *ngIf="dataType == 'text'" [ngModel]="value" simpleText [required]="isRequired"
    (ngModelChange)="modelChanged($event)" name="inputControl" />
 
    <input *ngIf="dataType == 'date'" [ngModel]="value" [required]="isRequired"

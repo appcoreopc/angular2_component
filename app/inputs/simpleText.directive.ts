@@ -1,6 +1,5 @@
 import { Directive, ElementRef, HostListener, OnInit , DoCheck, Input, OnChanges } from '@angular/core';
 
-
 @Directive({ selector: '[simpleText]' })
 export class SimpleTextDirective implements OnInit, DoCheck  {
 
@@ -8,17 +7,18 @@ export class SimpleTextDirective implements OnInit, DoCheck  {
        el.nativeElement.style.backgroundColor = 'yellow';
     }
 
+    // happens really fast
+    ngDoCheck() {
+      var classAttribute:string = this.el.nativeElement.getAttribute("class");
+      console.log(classAttribute);
+      if (classAttribute && classAttribute.indexOf('ng-invalid') === -1 && classAttribute.indexOf('simpleText-invalid') === -1)
+            this.el.nativeElement.setAttribute("class", classAttribute + " simpleText-invalid");
+    }
+
     ngOnInit() : any
     {
-      console.log(this.el.nativeElement.style);
     }
-
-    ngDoCheck() {
-      console.log(this.el.nativeElement.getAttribute("class"));
-    }
-
     ngOnChanges():any {
-      console.log(this.el.nativeElement.getAttribute("class"));
     }
 
 }
