@@ -10,9 +10,15 @@ export class SimpleTextDirective implements OnInit, DoCheck  {
     // happens really fast
     ngDoCheck() {
       var classAttribute:string = this.el.nativeElement.getAttribute("class");
+
       console.log(classAttribute);
       if (classAttribute && classAttribute.indexOf('ng-invalid') === -1 && classAttribute.indexOf('simpleText-invalid') === -1)
             this.el.nativeElement.setAttribute("class", classAttribute + " simpleText-invalid");
+     else if (classAttribute && classAttribute.indexOf('ng-valid') !== -1 && classAttribute.indexOf('simpleText-invalid') !== -1)
+     {
+           var newAttribute: string = classAttribute.replace('simpleText-invalid', '');
+           this.el.nativeElement.setAttribute("class", newAttribute);
+     }
     }
 
     ngOnInit() : any
