@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit , DoCheck, OnChanges } from '@angular/core';
 import { NgModule } from '@angular/core';
 
 
@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
   selector: 'input-component',
   template: `
 
-   <input *ngIf="dataType == 'text'" [ngModel]="value" [required]="isRequired"
+   <input *ngIf="dataType == 'text'" [ngModel]="value" simpleText SimpleTextDirective [required]="isRequired"
    (ngModelChange)="modelChanged($event)" name="inputControl" />
 
    <input *ngIf="dataType == 'date'" [ngModel]="value" [required]="isRequired"
@@ -15,7 +15,7 @@ import { NgModule } from '@angular/core';
    `,
 })
 
-export class InputComponent
+export class InputComponent implements OnInit, DoCheck, OnChanges
 {
   private _value:string = "";
 
@@ -23,9 +23,24 @@ export class InputComponent
 
   @Input() dataType : string = "text";
 
+  @Input() displayType : string = "SimpleText";
+
   @Input() value = "";
 
   @Output() onModelChanged = new EventEmitter();
+
+  ngOnChanges()
+  {
+
+  }
+
+  ngOnInit():any {
+
+  }
+
+  ngDoCheck() {
+
+  }
 
   modelChanged(evt:any)
   {
