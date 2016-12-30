@@ -21,7 +21,7 @@ export class SimpleTextDirective implements AfterViewChecked {
                         this.el.nativeElement.setAttribute(Constant.classAttribute, newAttribute + " " + Constant.simpleTextValid);
                   }
             }
-            else if (classAttribute && classAttribute.indexOf(Constant.ngInvalid)) {
+            else if (classAttribute && classAttribute.indexOf(Constant.ngInvalid) !== -1) {
                   var newAttribute: string = Constant.stringEmpty;
                   if (classAttribute.indexOf(Constant.simpleTextValid) !== -1) {
                         newAttribute = classAttribute.replace(Constant.simpleTextValid, Constant.stringEmpty);

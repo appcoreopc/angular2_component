@@ -1,3 +1,48 @@
+
+
+:hov
+
+.cls
+
+element.style {
+}
+body > .navbar {
+    font-size: 13px;
+}
+.navbar-fixed-top {
+    top: 0;
+}
+.navbar-fixed-top, .navbar-fixed-bottom {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+    margin-bottom: 0;
+}
+.navbar {
+    margin-bottom: 20px;
+    overflow: visible;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+Inherited from body
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+    background-color: #ffffff;
+}
+Inherited from html
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
 h1 {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;
