@@ -31,15 +31,13 @@ export class InputComponent implements OnInit, DoCheck, OnChanges
 
   ngOnChanges()
   {
-
+     
   }
 
   ngOnInit():any {
-
   }
 
   ngDoCheck() {
-
   }
 
   modelChanged(evt:any)
