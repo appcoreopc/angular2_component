@@ -1,7 +1,6 @@
 import { Component, Input, Output, EventEmitter, OnInit , DoCheck, OnChanges } from '@angular/core';
 import { NgModule } from '@angular/core';
 
-
 @Component({
   selector: 'input-component',
   template: `
@@ -42,11 +41,10 @@ export class InputComponent implements OnInit, DoCheck, OnChanges
 
   modelChanged(evt:any)
   {
-    console.log(evt);
     this.onModelChanged.emit(evt);
   }
 
   getValue() {
-     console.log(this.value);
   }
+  
  }

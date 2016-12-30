@@ -8,7 +8,7 @@ import { TypeData } from "./inputs/enumDataType"
 
 export class AppComponent  {
 
-  name = 'Angular';
+  name = 'Control Demo';
   counterValue = 5;
   inputTextValue = "angular2";
 
