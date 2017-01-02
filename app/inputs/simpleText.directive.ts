@@ -12,23 +12,23 @@ export class SimpleTextDirective implements AfterViewChecked {
 
             if (classAttribute && classAttribute.indexOf(Constant.ngValid) !== -1) {
                   var newAttribute: string = Constant.stringEmpty;
-                  if (classAttribute.indexOf(Constant.simpleTextInvalid) !== -1) // found invalid
+                  if (classAttribute.indexOf(Constant.simpleTextInvalidClass) !== -1) // found invalid
                   {
-                        newAttribute = classAttribute.replace(Constant.simpleTextInvalid, Constant.stringEmpty);
+                        newAttribute = classAttribute.replace(Constant.simpleTextInvalidClass, Constant.stringEmpty);
                         this.el.nativeElement.setAttribute(Constant.classAttribute, newAttribute);
                   }
-                  if ((classAttribute.indexOf(Constant.simpleTextValid) === -1)) {
-                        this.el.nativeElement.setAttribute(Constant.classAttribute, newAttribute + " " + Constant.simpleTextValid);
+                  if ((classAttribute.indexOf(Constant.simpleTextValidClass) === -1)) {
+                        this.el.nativeElement.setAttribute(Constant.classAttribute, newAttribute + " " + Constant.simpleTextValidClass);
                   }
             }
             else if (classAttribute && classAttribute.indexOf(Constant.ngInvalid) !== -1) {
                   var newAttribute: string = Constant.stringEmpty;
-                  if (classAttribute.indexOf(Constant.simpleTextValid) !== -1) {
-                        newAttribute = classAttribute.replace(Constant.simpleTextValid, Constant.stringEmpty);
+                  if (classAttribute.indexOf(Constant.simpleTextValidClass) !== -1) {
+                        newAttribute = classAttribute.replace(Constant.simpleTextValidClass, Constant.stringEmpty);
                         this.el.nativeElement.setAttribute(Constant.classAttribute, newAttribute);
                   }
-                  if (classAttribute.indexOf(Constant.simpleTextInvalid) === -1) // cannot find invalid, append
-                        this.el.nativeElement.setAttribute(Constant.classAttribute, newAttribute + " " + Constant.simpleTextInvalid);
+                  if (classAttribute.indexOf(Constant.simpleTextInvalidClass) === -1) // cannot find invalid, append
+                        this.el.nativeElement.setAttribute(Constant.classAttribute, newAttribute + " " + Constant.simpleTextInvalidClass);
             }
       }
 }

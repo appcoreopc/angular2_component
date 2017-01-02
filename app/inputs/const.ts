@@ -5,6 +5,10 @@ export namespace Constant {
     export const classAttribute: string = 'class';
     export const stringEmpty: string = '';
 
-    export const simpleTextInvalid: string = 'simpleText-invalid';
-    export const simpleTextValid: string = 'simpleText-valid';
+    export const simpleTextInvalidClass: string = 'simpleText-invalid';
+    export const simpleTextValidClass: string = 'simpleText-valid';
+
+    export const textIconInvalid: string = 'glyphicon-remove';
+    export const textIconValid: string = 'glyphicon-ok';
+
 }

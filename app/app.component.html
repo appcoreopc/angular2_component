@@ -24,23 +24,34 @@ Reset component demo
 <form>
 
     Input control Required<br/>
-    <input-component [value]="inputTextValue" [isRequired]="true" (onModelChanged)="modelChanged($event)"></input-component>
+    <input-component [value]="inputTextValue" [inputDisplayType]="'simpleText'" [isRequired]="true" (onModelChanged)="modelChanged($event)"></input-component>
 
     <br/>Input control Optional<br/>
-    <input-component [value]="inputTextValue" [isRequired]="false" (onModelChanged)="modelChanged($event)">
+    <input-component [value]="inputTextValue" [inputDisplayType]="'simpleText'" [isRequired]="false" (onModelChanged)="modelChanged($event)">
     </input-component>
 
+    <br/>Icon Input control <br/>
+
+    <input-component [value]="inputTextValue" [inputDisplayType]="'iconText'" [isRequired]="true" (onModelChanged)="modelChanged($event)">
+    </input-component>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
 
 
-     <div class="inner-addon left-addon">
-      <i class="glyphicon glyphicon-user"></i>      
-      <input type="text" class="form-control" placeholder="Username" />
+    <div class="inner-addon left-addon">
+        <i class="glyphicon glyphicon-user"></i>
+        <input type="text" class="form-control" placeholder="Username" />
     </div>
 
     <div class="inner-addon right-addon">
-      <i class="glyphicon glyphicon-search"></i>
-      <input type="text" class="form-control" placeholder="Search" />
-    </div>   
+        <i class="glyphicon glyphicon-search"></i>
+        <input type="text" class="form-control" placeholder="Search" />
+    </div>
 
 
 </form>
