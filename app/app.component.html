@@ -1,7 +1,7 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="./index.html">Appcore</a>
+            <a class="brand" href="./index.html"></a>
         </div>
     </div>
 </div>
@@ -13,45 +13,62 @@
     </div>
 </header>
 
-<h1>{{name}} Components</h1>
 
-Reset component demo
-<br />
+<div class="container" role="main">
 
-<reset-component [(counter)]="counterValue" (counterChange)="onCounterChanged($event)"></reset-component>
-<br/>
+    <h1>{{name}} Components</h1>
+    <div class="componentInfo">
+        Reset component - Increment and decrement value of a controls
+        <div>
+            <reset-component [(counter)]="counterValue" (counterChange)="onCounterChanged($event)"></reset-component>
+        </div>
+    </div>
 
-<form>
+    <form>
 
-    Input control Required<br/>
-    <input-component [value]="inputTextValue" [inputDisplayType]="'simpleText'" [isRequired]="true" (onModelChanged)="modelChanged($event)"></input-component>
+        <div class="componentInfo">
+            A simple input control which uses AngularJs invalid to validate and change the textbox stlye to indicate error. Try removing
+            all the text and see what happens.
+            <div>
+                <input-component [value]="inputTextValue" [inputDisplayType]="'simpleText'" [isRequired]="true" (onModelChanged)="modelChanged($event)"></input-component>
+            </div>
+        </div>
 
-    <br/>Input control Optional<br/>
-    <input-component [value]="inputTextValue" [inputDisplayType]="'simpleText'" [isRequired]="false" (onModelChanged)="modelChanged($event)">
-    </input-component>
+        <div class="componentInfo">
+            Simple text that allows text to be empty.
+            <div>
+                <input-component [value]="inputTextValue" [inputDisplayType]="'simpleText'" [isRequired]="false" (onModelChanged)="modelChanged($event)">
+                </input-component>
+            </div>
+        </div>
 
-    <br/>Required Icon Input control <br/>
+        <div class="componentInfo">
 
-    <input-component [value]="inputTextValue" [inputDisplayType]="'iconText'" [isRequired]="true" (onModelChanged)="modelChanged($event)">
-    </input-component>
+            Input that uses glyphicon to indicate if an input is incorrect. Try removing all text, you can see text input icon changes
+            too.
+            <div>
+                <input-component [value]="inputTextValue" [inputDisplayType]="'iconText'" [isRequired]="true" (onModelChanged)="modelChanged($event)">
+                </input-component>
+            </div>
+        </div>
 
-    <br/>Optional Icon Input control <br/>
+        <div class="componentInfo">
+            This icon text input allows text to be empty. It will not show any error.
+            <div>
+                <input-component [value]="inputTextValue" [inputDisplayType]="'iconText'" [isRequired]="true" (onModelChanged)="modelChanged($event)">
+                </input-component>
+            </div>
+        </div>
 
-    <input-component [value]="inputTextValue" [inputDisplayType]="'iconText'" [isRequired]="true" (onModelChanged)="modelChanged($event)">
-    </input-component>
+        <div class="componentInfo">
+            A group button that toggles state whenever it is clicked. This allow selection of either one values.
 
+            <div>
+                <button-state (onModelChanged)="modelChanged($event)">
+                </button-state>
+            </div>
+        </div>
 
-    <button-state (onModelChanged)="modelChanged($event)">
-    </button-state>
+    </form>
 
-    
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-
-</form>
+</div>

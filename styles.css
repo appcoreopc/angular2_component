@@ -85,3 +85,14 @@ body {
     color: #3276b1;
     background-color: #fff;
 }
+
+.container  { 
+    padding-left: 30px;
+
+}
+
+.componentInfo { 
+    display : block; 
+    margin-top : 10px;
+    margin-bottom: 10px;
+}
