@@ -72,8 +72,16 @@ h1 {
 .left-addon input  { padding-left:  30px; }
 .right-addon input { padding-right: 30px; }
 
-
-
 body {
   margin: 10px;
+}
+
+.radioBtn .notActive {
+    color: #3276b1;
+    background-color: #fff;
+}
+
+.radioBtn .notActive {
+    color: #3276b1;
+    background-color: #fff;
 }

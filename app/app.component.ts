@@ -3,14 +3,20 @@ import { TypeData } from "./inputs/enumDataType"
 
 @Component({
   selector: 'my-app',
-  templateUrl : `./app/app.component.html`
+  templateUrl: `./app/app.component.html`
 })
 
-export class AppComponent  {
+export class AppComponent {
 
   name = 'Control Demo';
   counterValue = 5;
   inputTextValue = "angular2";
+
+  keyValueData = [
+    { key: 'Yes', value: 'Yes' },
+    { key: 'No', value: 'No' }
+  ];
+
 
   onCounterChanged(evt: number) {
     console.log(evt);
@@ -20,8 +26,7 @@ export class AppComponent  {
     console.log(this.inputTextValue);
   }
 
-  modelChanged(evt:any)
-  {
+  modelChanged(evt: any) {
     console.log(evt);
   }
 }

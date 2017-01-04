@@ -30,28 +30,28 @@ Reset component demo
     <input-component [value]="inputTextValue" [inputDisplayType]="'simpleText'" [isRequired]="false" (onModelChanged)="modelChanged($event)">
     </input-component>
 
-    <br/>Icon Input control <br/>
+    <br/>Required Icon Input control <br/>
 
     <input-component [value]="inputTextValue" [inputDisplayType]="'iconText'" [isRequired]="true" (onModelChanged)="modelChanged($event)">
     </input-component>
 
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+    <br/>Optional Icon Input control <br/>
+
+    <input-component [value]="inputTextValue" [inputDisplayType]="'iconText'" [isRequired]="true" (onModelChanged)="modelChanged($event)">
+    </input-component>
 
 
-    <div class="inner-addon left-addon">
-        <i class="glyphicon glyphicon-user"></i>
-        <input type="text" class="form-control" placeholder="Username" />
-    </div>
+    <button-state (onModelChanged)="modelChanged($event)">
+    </button-state>
 
-    <div class="inner-addon right-addon">
-        <i class="glyphicon glyphicon-search"></i>
-        <input type="text" class="form-control" placeholder="Search" />
-    </div>
-
+    
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
 
 </form>
